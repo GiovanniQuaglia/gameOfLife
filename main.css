@@ -1,0 +1,19 @@
+div {
+  position: relative;
+  width: auto;
+  height: auto;
+}
+
+#mainbox {
+  position: relative;
+  width: 152px;
+  margin: 20% auto auto auto;
+}
+
+.square {
+  float: left;
+  height: 15px;
+  width: 15px;
+  background-color: tomato;
+  visibility: visible;
+}
