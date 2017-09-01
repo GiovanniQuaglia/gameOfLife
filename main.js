@@ -14,7 +14,8 @@ function visibilityArr () {
     [4, 1],
     [3, 2],
     [5, 1],
-    [6, 5]
+    [6, 5],
+    [4, 3]
   ]
 
   for (var i = 0; i < index.length; i++) {
@@ -26,6 +27,10 @@ function visibilityArr () {
 visibilityArr()
 
 function change () {
+  var storedCellsOne = []
+  var storedCellsTwo = []
+  var storedCellsMoreThanThree = []
+  var storedCellsThree = []
   for (var i = 0; i < square.length ; i++) {
     var j = 0
     while (j < square.length) {
@@ -43,26 +48,27 @@ function change () {
         for (x = 0; x < index.length; x++) {
           var a = index[x][0]
           var b = index[x][1]
-
           if (a < 0 || b < 0 || a > square.length - 1 || b > square.length - 1) {
             continue
           }
-
           if (square[a][b].style.visibility === 'hidden'){
             counter++
             }
           }
-
-      if (counter == 1 && square[i][j].style.visibility === 'hidden'){
-        square[i][j].style.visibility = 'visible'
-      }
+          if (counter == 1 && square[i][j].style.visibility === 'hidden'){
+            storedCellsOne.push(square[i][j])
+          }
+          if (counter == 3 && square[i][j].style.visibility === 'visible'){
+            storedCellsThree.push(square[i][j])
+          }
       j = j + 1
     }
   }
+  // for (var i = 0; i < storedCellsOne.length; i++){
+  //   storedCellsOne[i].style.visibility = 'visible'
+  // }
+  // // for (var i = 0; i < storedCellsThree.length; i++){
+  // //   storedCellsThree[i].style.visibility = 'hidden'
+  // // }
 }
 change()
-
-//
-// if (square[i][j].style.visibility === 'hidden') {
-//   square[i][j].style.visibility = 'visible'
-// }

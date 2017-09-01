@@ -6,7 +6,7 @@ div {
 
 #mainbox {
   position: relative;
-  width: 152px;
+  width: 172px;
   margin: 20% auto auto auto;
 }
 
@@ -16,4 +16,5 @@ div {
   width: 15px;
   background-color: tomato;
   visibility: visible;
+  border: 1px solid #fff;
 }
